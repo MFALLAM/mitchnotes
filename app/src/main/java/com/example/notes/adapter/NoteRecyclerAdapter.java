@@ -20,8 +20,9 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
     private List<Note> mNotes;
     private Context mContext;
 
-    public NoteRecyclerAdapter(List<Note> notes) {
+    public NoteRecyclerAdapter(List<Note> notes, Context context) {
         this.mNotes = notes;
+        mContext = context;
     }
 
     @NonNull
