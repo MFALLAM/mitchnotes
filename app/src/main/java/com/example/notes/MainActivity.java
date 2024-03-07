@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         findViewsById();
         initRecyclerView();
         insertFakeNotes();
+
+        setSupportActionBar(findViewById(R.id.notes_toolbar));
     }
 
     private void insertFakeNotes() {
