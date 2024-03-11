@@ -13,7 +13,7 @@ import com.example.notes.util.VerticalSpacingItemDecorator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapter.OnNoteListener {
 
     private RecyclerView mNotesRecycler;
     private List<Note> mNotesList = new ArrayList<>();
@@ -51,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
         mNotesRecycler.setLayoutManager(linearLayoutManager);
         VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(10);
         mNotesRecycler.addItemDecoration(itemDecorator);
-        mNoteRecyclerAdapter = new NoteRecyclerAdapter(mNotesList, MainActivity.this);
+        mNoteRecyclerAdapter = new NoteRecyclerAdapter(mNotesList, MainActivity.this, this);
         mNotesRecycler.setAdapter(mNoteRecyclerAdapter);
+    }
+
+    @Override
+    public void onNoteClick(int position) {
+
     }
 }
