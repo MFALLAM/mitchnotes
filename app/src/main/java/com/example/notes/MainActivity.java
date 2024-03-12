@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.notes.adapter.NoteRecyclerAdapter;
 import com.example.notes.data.Note;
@@ -15,6 +16,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapter.OnNoteListener {
 
+    private static final String TAG = "MainActivity";
     private RecyclerView mNotesRecycler;
     private List<Note> mNotesList = new ArrayList<>();
     private NoteRecyclerAdapter mNoteRecyclerAdapter;
@@ -57,6 +59,6 @@ public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapt
 
     @Override
     public void onNoteClick(int position) {
-
+        Log.d(TAG, "onNoteClick: clicked->" + mNotesList.get(position));
     }
 }
