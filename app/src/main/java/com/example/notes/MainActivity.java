@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -60,5 +61,9 @@ public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapt
     @Override
     public void onNoteClick(int position) {
         Log.d(TAG, "onNoteClick: clicked->" + mNotesList.get(position));
+
+        Intent intent = new Intent(MainActivity.this, NoteActivity.class);
+        intent.putExtra("selected_note", mNotesList.get(position));
+        startActivity(intent);
     }
 }
