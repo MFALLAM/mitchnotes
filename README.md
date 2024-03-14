@@ -8,4 +8,14 @@
     <li>Custom Toolbars: Build and customize toolbars according to your preferences for enhanced usability.</li> 
     <li>RecyclerView: Implement a dynamic list view for managing and viewing your notes efficiently.</li>
     <li>Navigation: Seamlessly navigate through different activities within the app using intents.</li>
+    <li>Data Handling: Learn how to pass data between activities using bundles and intent extras.</li>
+    <li>Threading and AsyncTask Basics: Understand threading concepts and AsyncTask for smooth handling of background tasks.
+</li>
+<li>Custom Layouts and Data Models: Create custom layouts based on custom data models for a personalized note-taking experience.
+</li>
+<li>Room Database: Utilize proper architecture patterns with Room for efficient Read, Write, Update, and Delete operations on SQLite database transactions.
+</li>
+
+<h3>Installation and Usage</h3>
+
 </ul>
