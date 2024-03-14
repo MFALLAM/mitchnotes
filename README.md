@@ -18,4 +18,8 @@
 
 <h3>Installation and Usage</h3>
 
+<ol>
+    <li>Clone the repository: git clone https://github.com/yourusername/note-app.git</li>
+    <li>Open the project in Android Studio.</li>
+<ol>
 </ul>
