@@ -24,3 +24,19 @@
     <li>Open the project in Android Studio.</li>
 <ol>
 </ul>
+
+<h3>Usage</h3>
+
+<ol>
+    <li>Customize Themes, Color Schemes, and Styles in res/values/styles.xml.</li>
+    <li>Build Custom Toolbars in res/layout/toolbar_layout.xml.</li>
+    <li>Implement RecyclerView in MainActivity.java for displaying notes.</li>
+    <li>Set RecyclerView OnClickListeners to handle user interactions.</li>
+    <li>Navigate to a new activity with RecyclerView Click using Intent.</li>
+    <li>Pass data between activities using Bundle or Intent Extras.</li>
+    <li>Utilize Threading and AsyncTask for background tasks in AsyncTask.java.</li>
+    <li>Design Custom Layouts oriented around Custom Data Models in res/layout/custom_layout.xml.</li>
+    <li>Create and manage custom data models in NoteModel.java.</li>
+    <li>Implement proper architecture patterns with Room for database transactions in NoteDao.java and NoteDatabase.java.</li>
+<ol>
+</ul>
