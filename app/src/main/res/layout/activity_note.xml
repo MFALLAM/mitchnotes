@@ -13,11 +13,14 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark">
 
-
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary" />
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <include layout="@layout/layout_note_toolbar"/>
+
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -25,8 +28,8 @@
         android:id="@+id/note_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="top|left"
         android:background="@android:color/transparent"
+        android:gravity="top|left"
         android:padding="5dp"
         android:textColor="#000"
         android:textSize="23sp" />
