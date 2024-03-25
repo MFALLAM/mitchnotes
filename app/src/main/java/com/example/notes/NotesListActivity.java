@@ -15,7 +15,7 @@ import com.example.notes.util.VerticalSpacingItemDecorator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapter.OnNoteListener {
+public class NotesListActivity extends AppCompatActivity implements NoteRecyclerAdapter.OnNoteListener {
 
     private static final String TAG = "MainActivity";
     private RecyclerView mNotesRecycler;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_notes_list);
 
         findViewsById();
         initRecyclerView();
@@ -50,11 +50,11 @@ public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapt
     }
 
     private void initRecyclerView() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(NotesListActivity.this);
         mNotesRecycler.setLayoutManager(linearLayoutManager);
         VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(10);
         mNotesRecycler.addItemDecoration(itemDecorator);
-        mNoteRecyclerAdapter = new NoteRecyclerAdapter(mNotesList, MainActivity.this, this);
+        mNoteRecyclerAdapter = new NoteRecyclerAdapter(mNotesList, NotesListActivity.this, this);
         mNotesRecycler.setAdapter(mNoteRecyclerAdapter);
     }
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapt
     public void onNoteClick(int position) {
         Log.d(TAG, "onNoteClick: clicked->" + mNotesList.get(position));
 
-        Intent intent = new Intent(MainActivity.this, NoteActivity.class);
+        Intent intent = new Intent(NotesListActivity.this, NoteActivity.class);
         intent.putExtra("selected_note", mNotesList.get(position));
         startActivity(intent);
     }
